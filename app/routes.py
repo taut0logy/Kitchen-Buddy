@@ -1,10 +1,10 @@
 from flask import Blueprint, request, jsonify
 from app.database import get_session
 from app.models import Ingredient
-from app.services import create_chatbot
+#from app.services import create_chatbot
 api = Blueprint('api', __name__)
 
-chatbot = create_chatbot()
+#chatbot = create_chatbot()
 
 @api.route('/ingredients', methods=['POST'])
 def add_ingredient():
@@ -29,8 +29,8 @@ def update_ingredient():
     return jsonify({"error": "Ingredient not found!"}), 404
 
 
-@api.route('/chat', methods=['POST'])
-def chat():
-    data = request.json
-    response = chatbot.run(data['message'])
-    return jsonify({"response": response})
+# @api.route('/chat', methods=['POST'])
+# def chat():
+#     data = request.json
+#     response = chatbot.run(data['message'])
+#     return jsonify({"response": response})
