@@ -1,0 +1,35 @@
+name	description
+Salt	A white crystalline substance used to season food.
+Sugar	A sweet crystalline substance used in cooking and baking.
+Olive Oil	A liquid fat obtained from olives, used for cooking.
+Garlic	A pungent herb used in cooking, often in savory dishes.
+Chicken	A type of poultry commonly used in a variety of recipes.
+Flour	A powder made from grinding wheat used in baking.
+Tomato	A red, juicy fruit often used in salads and sauces.
+Basil	A fragrant herb used in cooking, especially in Mediterranean dishes.
+Eggs	A common ingredient in baking and cooking, typically from chickens.
+Butter	A dairy product made from cream, used in cooking and baking.
+Cucumber	A crisp, cool vegetable used in salads and sandwiches.
+Carrot	A root vegetable, typically orange, used in a variety of dishes.
+Milk	A white liquid produced by mammals, used in baking and cooking.
+Onion	A bulb vegetable with a pungent flavor, often used in savory dishes.
+Cheese	A dairy product made from curdled milk, used in cooking and snacking.
+Rice	A staple grain used in many cultures' cooking.
+Broccoli	A green vegetable often used in salads or steamed dishes.
+Potatoes	A starchy root vegetable used in many recipes, from mashed to baked.
+Lemon	A sour citrus fruit, often used in beverages and desserts.
+Spinach	A leafy green vegetable used in salads, soups, and casseroles.
+Avocado	A creamy, green fruit often used in salads and spreads.
+Bell Pepper	A sweet, colorful vegetable, commonly used in salads or stir-fries.
+Zucchini	A mild-flavored green squash used in cooking.
+Pork	Meat from a pig, commonly used in stews, roasts, and stir-fries.
+Beef	Meat from cattle, used in a variety of dishes, such as steaks and stews.
+Shrimp	A small, edible crustacean often used in seafood dishes.
+Mushrooms	Fungi used in cooking, often sautéed or added to stews.
+Basil	A fragrant herb used in Mediterranean cooking, especially in pasta.
+Cinnamon	A spice derived from tree bark, often used in sweet dishes.
+Nutmeg	A spice made from seeds, used in baking and beverages.
+Ginger	A spicy root often used in baking, stir-fries, and teas.
+Mint	A refreshing herb used in beverages, desserts, and salads.
+Chilli	A hot pepper used to add spice to dishes.
+Parsley	A fresh herb used in salads, sauces, and as a garnish.

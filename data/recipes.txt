@@ -1,0 +1,32 @@
+nname	description	ingredients_name
+Chicken Pasta	A creamy pasta dish with grilled chicken and a garlic sauce.	Chicken, Olive Oil, Garlic, Salt, Pasta
+Tomato Soup	A smooth soup made from tomatoes, perfect for a cold day.	Tomato, Garlic, Olive Oil, Salt, Onion
+Pancakes	Fluffy breakfast pancakes served with syrup.	Flour, Eggs, Sugar, Butter
+Chicken Salad	A healthy salad with grilled chicken, tomatoes, and basil.	Chicken, Tomato, Basil, Olive Oil
+Garlic Bread	Toasted bread with garlic butter topping.	Butter, Garlic, Salt, Bread
+Lemon Cake	A sweet cake flavored with fresh lemon zest.	Flour, Sugar, Eggs, Butter, Lemon
+Caprese Salad	A fresh salad with tomatoes, mozzarella, and basil.	Tomato, Basil, Olive Oil, Salt, Mozzarella
+Scrambled Eggs	Soft scrambled eggs, a classic breakfast dish.	Eggs, Butter, Salt
+Fruit Salad	A mix of fresh, juicy fruits, perfect for a snack.	Tomato, Olive Oil, Basil, Cucumber, Carrot
+Grilled Chicken	Chicken grilled to perfection, served with a side of vegetables.	Chicken, Olive Oil, Garlic, Salt, Broccoli, Carrot
+Beef Stew	A hearty stew made with tender beef, potatoes, and carrots.	Beef, Onion, Garlic, Potato, Carrot, Salt
+Shrimp Stir-fry	A quick stir-fry with shrimp, bell peppers, and broccoli.	Shrimp, Bell Pepper, Broccoli, Garlic, Soy Sauce, Olive Oil
+Pork Chops	Pan-seared pork chops with a savory seasoning.	Pork, Salt, Pepper, Olive Oil
+Beef Tacos	Soft tacos filled with spiced beef, lettuce, and cheese.	Beef, Onion, Garlic, Salt, Cheese, Lettuce, Taco Shells
+Chicken Curry	A flavorful chicken curry served with rice.	Chicken, Onion, Garlic, Rice, Coconut Milk, Curry Powder, Salt
+Vegetable Stir-fry	A quick stir-fry with bell peppers, zucchini, and mushrooms.	Zucchini, Bell Pepper, Mushroom, Olive Oil, Garlic, Soy Sauce
+Egg Salad	A creamy egg salad made with mayonnaise and mustard.	Eggs, Mayonnaise, Mustard, Salt
+Spinach Lasagna	A hearty lasagna with layers of spinach and cheese.	Spinach, Tomato, Garlic, Cheese, Lasagna Noodles, Olive Oil
+Spaghetti Bolognese	A classic Italian pasta dish with a rich meat sauce.	Ground Beef, Tomato, Onion, Garlic, Spaghetti, Olive Oil, Basil
+Avocado Toast	Toast topped with smashed avocado and a sprinkle of seasoning.	Avocado, Bread, Salt, Pepper
+Cucumber Salad	A refreshing salad with cucumber and a vinegar dressing.	Cucumber, Vinegar, Olive Oil, Salt, Sugar
+Beef Burger	A juicy beef patty served on a bun with lettuce, tomato, and cheese.	Beef, Lettuce, Tomato, Cheese, Burger Bun
+Chocolate Cake	A rich and moist chocolate cake, perfect for dessert.	Flour, Sugar, Eggs, Cocoa Powder, Butter, Chocolate
+Grilled Cheese	A crispy sandwich with melted cheese inside.	Bread, Butter, Cheese
+Chicken Quesadilla	A cheesy tortilla filled with grilled chicken, peppers, and onions.	Chicken, Tortilla, Cheese, Bell Pepper, Onion, Olive Oil
+Baked Potatoes	Fluffy baked potatoes served with butter and sour cream.	Potato, Butter, Sour Cream, Salt
+Chicken Tacos	Soft tacos filled with grilled chicken, salsa, and cheese.	Chicken, Taco Shells, Cheese, Salsa
+Shrimp Scampi	A flavorful shrimp dish cooked in garlic butter sauce.	Shrimp, Butter, Garlic, Olive Oil, Lemon, Pasta
+Mushroom Risotto	A creamy rice dish cooked with mushrooms and Parmesan cheese.	Mushroom, Rice, Parmesan, Butter, Garlic, Onion
+Pasta Primavera	A light pasta dish with fresh vegetables like zucchini and bell peppers.	Pasta, Zucchini, Bell Pepper, Garlic, Olive Oil
+Fish Tacos	Tacos filled with crispy fish, slaw, and a tangy sauce.	Fish, Taco Shells, Cabbage, Sour Cream, Lime

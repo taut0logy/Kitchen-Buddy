@@ -1,0 +1,31 @@
+rating|text
+5|Absolutely delicious! The chicken pasta was perfectly cooked and the garlic sauce was rich and creamy. Highly recommend!
+4|The tomato soup was great, but it could use a little more seasoning. Still, a solid dish overall.
+3|The pancakes were fluffy, but they lacked flavor. Adding more sugar or vanilla would improve the taste.
+5|I loved the chicken salad! The grilled chicken was juicy and the combination of tomato and basil was refreshing.
+4|The garlic bread was good, but I would have preferred a bit more garlic flavor in the butter. Still tasty though.
+5|The lemon cake was amazing! It had the perfect balance of sweetness and tang. I couldn't stop eating it!
+4|The caprese salad was fresh and tasty, but I felt like it needed a bit more balsamic vinegar to really pop.
+3|The scrambled eggs were fine, but a little too runny for my liking. I prefer them cooked a bit more.
+5|Fruit salad was a delightful mix of fresh fruits. Perfect for a snack on a hot day!
+2|The grilled chicken was overcooked and a bit dry. I was expecting better flavor.
+4|Beef stew was hearty and satisfying, but it could have used a little more seasoning to make the beef shine.
+5|Shrimp stir-fry was delicious! The shrimp were perfectly cooked and the vegetables were fresh and crisp.
+3|Pork chops were good, but a bit too greasy for my taste. Would prefer them a bit leaner.
+5|The beef tacos were fantastic! The ground beef was flavorful and paired perfectly with the cheese and lettuce.
+4|The chicken curry was flavorful and spicy, but the rice was a bit undercooked.
+5|The vegetable stir-fry was light and delicious. Loved the combination of zucchini and bell peppers.
+4|Egg salad was creamy and tasty, but I wish there was more mustard to give it an extra kick.
+5|Spinach lasagna was incredible! The layers of spinach and cheese were perfectly balanced.
+5|Spaghetti Bolognese was rich and savory. The sauce was thick and flavorful, and the pasta was cooked just right.
+3|Avocado toast was okay, but the bread was a little too thick. The avocado could have used some extra seasoning.
+4|Cucumber salad was very refreshing. The vinegar dressing was tangy and the cucumber was perfectly crisp.
+5|The beef burger was juicy and flavorful. Loved the combination of lettuce, tomato, and cheese.
+5|Chocolate cake was rich and moist. Perfect for anyone with a sweet tooth!
+4|Grilled cheese was crispy and cheesy, but I felt like it could have been a bit more melty inside.
+5|Chicken quesadilla was fantastic! The chicken was tender and the cheese was melted to perfection.
+4|Baked potatoes were fluffy and delicious, but the sour cream was a bit too cold for my liking.
+5|Chicken tacos were fresh and tasty. The salsa added a nice touch to the dish.
+4|Shrimp scampi was flavorful, but I would have preferred more garlic in the sauce.
+3|Mushroom risotto was creamy, but the mushrooms didn't have much flavor. It needed more seasoning.
+5|Pasta primavera was light and delicious. The vegetables were perfectly cooked, and the pasta was nice and firm.

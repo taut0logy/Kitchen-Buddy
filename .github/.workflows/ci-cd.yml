@@ -1,0 +1,108 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Docker images
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/recipe-app:latest .
+
+      - name: Push images to Docker Hub
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/recipe-app:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.CLOUD_SERVER_IP }}
+          username: ${{ secrets.CLOUD_SERVER_USER }}
+          password: ${{ secrets.CLOUD_SERVER_PASSWORD }}
+          script: |
+            # Create Docker network if it doesn't exist
+            docker network create recipe-network || true
+
+            # Stop and remove existing containers
+            docker stop recipe-db || true
+            docker rm recipe-db || true
+            docker stop recipe-app || true
+            docker rm recipe-app || true
+
+            # Pull latest images
+            docker pull mysql:8
+            docker pull ${{ secrets.DOCKER_USERNAME }}/recipe-app:latest
+
+            # Remove dangling images
+            docker image prune -f || true
+
+            # Run MySQL container
+            docker run -d \
+              --name recipe-db \
+              -e MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }} \
+              -e MYSQL_DATABASE=recipe \
+              -e MYSQL_USER=recipe \
+              -e MYSQL_PASSWORD=${{ secrets.DB_PASSWORD }} \
+              -v db_data:/var/lib/mysql \
+              --network recipe-network \
+              mysql:8
+
+            # Run app container
+            docker run -d \
+              --name recipe-app \
+              -p 80:80 \
+              -e DATABASE_URI={{ secrets.DATABASE_URI }} \
+
+              
+              --network recipe-network \
+              ${{ secrets.DOCKER_USERNAME }}/recipe-app:latest
+
+            # Remove dangling images
+            docker image prune -f || true
+
+            # Remove dangling volumes
+            docker volume prune -f || true
+
+            # Wait for the Laravel container to be ready (use a better approach for waiting)
+            echo "Waiting for the Laravel container to be ready..."
+            sleep 10
+
+            # Link Storage
+            echo "Linking Storage..."
+            docker exec recipe-app php artisan storage:link
+
+            # Optimize
+            echo "Optimizing..."
+            docker exec recipe-app php artisan optimize
+
+            # Wait for the MySQL container to be ready
+            echo "Waiting for MySQL to be ready..."
+            until docker exec recipe-db mysqladmin ping --silent; do
+              echo "MySQL is not ready yet..."
+              sleep 3
+            done

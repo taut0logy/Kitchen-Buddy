@@ -1,0 +1,21 @@
+# Web Framework & REST APIs
+Flask==2.0.1
+Flask-RESTful==0.3.10
+Flask-CORS==4.0.0
+
+# Database
+SQLAlchemy==1.4.36
+PyMySQL==1.0.2
+cryptography==41.0.1
+
+# AI/ML & Language Models
+langchain==0.1.0
+llama-index==0.9.4
+langchain_google_genai==2.0.7
+
+# Image Processing
+Pillow==10.1.0
+pytesseract==0.3.10
+
+# Environment & Configuration
+python-dotenv==1.0.0

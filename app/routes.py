@@ -1,7 +1,8 @@
 from flask import Blueprint, request, jsonify, g
 from app.database import get_session
+from scripts.recipe_suggestor import RecipeSuggestor
 from app.models import Ingredient, User, Recipe, Review
-from app.auth import generate_token, token_required, rate_limited
+from app.auth import generate_token, token_required, rate_limited, refresh_access_token, revoke_token
 from werkzeug.security import generate_password_hash, check_password_hash
 
 api = Blueprint('api', __name__)
@@ -21,8 +22,22 @@ def login():
     if not user or not check_password_hash(user.password, password):
         return jsonify({'message': 'Invalid username or password!'}), 401
     
-    token = generate_token(user.id)
-    return jsonify({'token': token})
+    tokens = generate_token(user.id)
+    return jsonify(tokens)
+
+@api.route('/refresh', methods=['POST'])
+def refresh():
+    refresh_token = request.json.get('refresh_token')
+    if not refresh_token:
+        return jsonify({'message': 'Refresh token is required!'}), 400
+    return refresh_access_token(refresh_token)
+
+@api.route('/logout', methods=['POST'])
+@token_required
+def logout():
+    token = request.headers.get('Authorization').split(" ")[1]
+    revoke_token(token)
+    return jsonify({'message': 'Successfully logged out!'})
 
 @api.route('/protected', methods=['GET'])
 @token_required
@@ -50,19 +65,6 @@ def add_ingredient():
     session.commit()
     return jsonify({"message": "Ingredient added!"})
 
-@api.route('/ingredients', methods=['PUT'])
-@token_required
-@rate_limited
-def update_ingredient():
-    data = request.json
-    session = get_session()
-    ingredient = session.query(Ingredient).filter_by(name=data['name']).first()
-    if ingredient:
-        ingredient.quantity = data['quantity']
-        ingredient.unit = data['unit']
-        session.commit()
-        return jsonify({"message": "Ingredient updated!"})
-    return jsonify({"error": "Ingredient not found!"}), 404
 
 @api.route('/users', methods=['POST'])
 def create_user():
@@ -78,7 +80,7 @@ def create_user():
     if session.query(User).filter_by(username=username).first() or session.query(User).filter_by(email=email).first():
         return jsonify({'message': 'User with this username or email already exists!'}), 400
     
-    hashed_password = generate_password_hash(password, method='sha256')
+    hashed_password = generate_password_hash(password)
     new_user = User(username=username, email=email, password=hashed_password)
     session.add(new_user)
     session.commit()
@@ -165,3 +167,16 @@ def get_recipe(recipe_id):
         'description': recipe.description,
         'reviews': reviews_data
     })
+
+
+@api.route('/suggest-recipe', methods=['POST'])
+@token_required
+@rate_limited
+def suggest_recipe():
+    data = request.get_json()
+    ingredients = data.get('ingredients', [])
+    
+    suggestor = RecipeSuggestor()
+    recipe = suggestor.suggest_recipe(ingredients)
+    
+    return jsonify({'recipe': recipe})
