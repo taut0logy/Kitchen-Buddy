@@ -4,6 +4,12 @@
 
 This API provides functionality for managing users, recipes, ingredients, and reviews. It includes token-based authentication and rate limiting.
 
+## Install deps
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Authentication
 
 ### Login
